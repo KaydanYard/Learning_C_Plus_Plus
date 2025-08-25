@@ -72,6 +72,22 @@ int main() {
 
 	return 0;*/
 
+// Reading from the Console
+	/*cout << "Enter values for x and y: ";
+	double x;
+	double y;
+	cin >> x >> y;
+	cout << "x = " << x << ", y = " << y;
+	return 0;*/
 
+// 4th Activity Convert Fahrenheit to Celsius
+	double fahrenheit;
+	
+	cout << "Enter the Fahrenheit value: ";
+	cin >> fahrenheit;
+	
+	double celsius = (fahrenheit - 32) * 5 / 9;
+	cout << celsius << " degrees Celsius";
 
+	return 0;
 }
