@@ -1,4 +1,7 @@
+#define _USE_MATH_DEFINES
+
 #include <iostream>
+#include <cmath>
 
 using namespace std; //allow you to use std without having to put it before every item that is apart of it.
 
@@ -81,7 +84,7 @@ int main() {
 	return 0;*/
 
 // 4th Activity Convert Fahrenheit to Celsius
-	double fahrenheit;
+	/*double fahrenheit;
 	
 	cout << "Enter the Fahrenheit value: ";
 	cin >> fahrenheit;
@@ -89,5 +92,17 @@ int main() {
 	double celsius = (fahrenheit - 32) * 5 / 9;
 	cout << celsius << " degrees Celsius";
 
-	return 0;
+	return 0;*/
+
+// Using the cmath standard library
+	/*double result = floor(1.2);
+	cout << result;
+	return 0;*/
+
+// 5th Activity Calculate the Area of a Circle
+	double radius;
+	cout << "Enter the Radius: ";
+	cin >> radius;
+	double area = M_PI * (radius * radius);
+	cout << area;
 }
