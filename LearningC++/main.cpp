@@ -223,7 +223,7 @@ int main() {
 	return 0;*/
 
 // Exercise 9: Store 3 names in an array and recall one of them
-	string names[3] = {};
+	/*string names[3] = {};
 
 	cout << "Enter the 1st name: ";
 	cin >> names[0];
@@ -236,5 +236,12 @@ int main() {
 
 	cout << names[0];
 
+	return 0;*/
+
+// Casting aka Type Conversion
+	int x = 10;
+	int y = 3;
+	double z = static_cast<double>(x) / y;
+	cout << z;
 	return 0;
 }
