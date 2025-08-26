@@ -5,6 +5,7 @@
 #include <ctime>
 #include <iomanip>
 #include <iostream>
+#include <string>
 
 using namespace std; //allow you to use std without having to put it before every item that is apart of it.
 
@@ -162,8 +163,57 @@ int main() {
 	return 0;*/
 
 // Exercise 7: Create a table using cout
-	cout << left << setw(15) << "Course" << setw(15) << "Students" << endl
+	/*cout << left << setw(15) << "Course" << setw(15) << "Students" << endl
 		 << left << setw(15) << "C++" << right << setw(10) << 100 << endl
 		 << left << setw(15) << "JavaScript" << right << setw(10) << 50;
-	return 0;
+	return 0;*/
+
+// Data Types Size and Limits
+	//cout << sizeof(int);
+
+	/*cout << numeric_limits<int>::min() << endl
+		 << numeric_limits<int>::max();*/
+
+	/*int number = numeric_limits<int>::max();
+	number++;
+	cout << number;*/
+
+	/*cout << numeric_limits<short>::min() << endl
+		 << numeric_limits<short>::max();*/
+
+	/*cout << numeric_limits<long>::min() << endl
+		 << numeric_limits<long>::max();*/
+	
+// Working with Booleans
+	/*bool isNewUser = false;
+	cout << boolalpha << isNewUser;
+	return 0;*/
+
+// Working with Characters and Strings
+	/*char ch = 'a';
+	cout << +ch;
+	return 0;*/
+	
+	/*string name;
+	cout << "Enter your name: ";
+	getline(cin, name);
+	cout << "Hi " << name;
+	return 0;*/
+
+// Exercise 8: Address Questionaire
+	string street;
+	string city;
+	string state;
+	string zipCode;
+
+	cout << "Enter your Street: ";
+	getline(cin, street);
+	cout << "Enter your City: ";
+	getline(cin, city);
+	cout << "Enter your State: ";
+	getline(cin, state);
+	cout << "Enter your Zip Code: ";
+	getline(cin, zipCode);
+	cout << left << street << endl
+		 << city << ", " << state << ", " << zipCode;
 }
