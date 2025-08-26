@@ -201,7 +201,7 @@ int main() {
 	return 0;*/
 
 // Exercise 8: Address Questionaire
-	string street;
+	/*string street;
 	string city;
 	string state;
 	string zipCode;
@@ -215,5 +215,26 @@ int main() {
 	cout << "Enter your Zip Code: ";
 	getline(cin, zipCode);
 	cout << left << street << endl
-		 << city << ", " << state << ", " << zipCode;
+		 << city << ", " << state << ", " << zipCode;*/
+
+// Working with Arrays
+	/*int numbers[5] = {10, 20};
+	cout << numbers[2];
+	return 0;*/
+
+// Exercise 9: Store 3 names in an array and recall one of them
+	string names[3] = {};
+
+	cout << "Enter the 1st name: ";
+	cin >> names[0];
+
+	cout << "Enter the 2nd name: ";
+	cin >> names[1];
+
+	cout << "Enter the 3rd name: ";
+	cin >> names[2];
+
+	cout << names[0];
+
+	return 0;
 }
