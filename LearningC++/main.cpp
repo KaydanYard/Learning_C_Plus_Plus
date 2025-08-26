@@ -10,10 +10,24 @@
 using namespace std;
 
 int main() {
-// Logical Operators
-	int age = 20;
-	int salary = 50'000;
-	bool isEligible = (age > 18 && age < 65) && salary > 30'000;
-	cout << boolalpha << isEligible;
-	return 0;
+// Order of Logical Operators
+	// ()
+	// !
+	// &&
+	// ||
+	//bool a = true;
+	//bool b = false;
+	//bool c = false;
+	//bool result = a || b && c;
+	//cout << boolalpha << result;
+
+	//return 0;
+
+// Exercise 10: Verify if a job applicant is able to apply based on qualifications
+	bool isCitizen = true;
+	bool hasBachelors = false;
+	short yearsOfExperience = 3;
+
+	bool result = isCitizen && (hasBachelors || yearsOfExperience >= 2);
+	cout << boolalpha << "Your result is: " << result;
 }
