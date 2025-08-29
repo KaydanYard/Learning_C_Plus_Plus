@@ -10,24 +10,32 @@
 using namespace std;
 
 int main() {
-// Order of Logical Operators
-	// ()
-	// !
-	// &&
-	// ||
-	//bool a = true;
-	//bool b = false;
-	//bool c = false;
-	//bool result = a || b && c;
-	//cout << boolalpha << result;
+// If Statements
+	/*int temperature = 70;
+	if (temperature < 60) {
+		cout << "Cold";
+	}
+	else if (temperature < 90) {
+		cout << "Nice";
+	}
+	else {
+		cout << "Hot";
+	}
+	return 0;*/
 
-	//return 0;
+// Exercise 11 Write an if statement to determine what the commission rate should be
+	int sales = 10'000;
+	double commission;
+	
+	if (sales <= 10'000) {
+		commission = 0.10;
+	}
+	else if (sales > 10'000 && sales <= 15'000) {
+		commission = 0.15;
+	}
+	else {
+		commission = 0.20;
+	}
 
-// Exercise 10: Verify if a job applicant is able to apply based on qualifications
-	bool isCitizen = true;
-	bool hasBachelors = false;
-	short yearsOfExperience = 3;
-
-	bool result = isCitizen && (hasBachelors || yearsOfExperience >= 2);
-	cout << boolalpha << "Your result is: " << result;
+	cout << "Commission: " << commission;
 }
