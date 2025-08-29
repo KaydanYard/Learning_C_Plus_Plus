@@ -10,32 +10,24 @@
 using namespace std;
 
 int main() {
-// If Statements
-	/*int temperature = 70;
-	if (temperature < 60) {
-		cout << "Cold";
-	}
-	else if (temperature < 90) {
-		cout << "Nice";
-	}
-	else {
-		cout << "Hot";
-	}
-	return 0;*/
-
-// Exercise 11 Write an if statement to determine what the commission rate should be
-	int sales = 10'000;
-	double commission;
+// Nesting if statements
+	bool isUSCitizen = true;
+	bool isCAResident = false;
+	short tuition;
 	
-	if (sales <= 10'000) {
-		commission = 0.10;
-	}
-	else if (sales > 10'000 && sales <= 15'000) {
-		commission = 0.15;
+	if (isUSCitizen) {
+		if (isCAResident) {
+			tuition = 0;
+		}
+		else {
+			tuition = 1000;
+		}
 	}
 	else {
-		commission = 0.20;
+		tuition = 3000;
 	}
 
-	cout << "Commission: " << commission;
+	cout << "Tution: " << tuition;
+
+	return 0;
 }
