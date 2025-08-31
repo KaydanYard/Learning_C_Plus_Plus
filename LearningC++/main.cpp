@@ -10,24 +10,21 @@
 using namespace std;
 
 int main() {
-// Nesting if statements
-	bool isUSCitizen = true;
-	bool isCAResident = false;
-	short tuition;
-	
-	if (isUSCitizen) {
-		if (isCAResident) {
-			tuition = 0;
-		}
-		else {
-			tuition = 1000;
-		}
-	}
-	else {
-		tuition = 3000;
-	}
+// The Conditional Operator
+	/*int sales = 11'000;
+	double commission = (sales > 10'000) ? 0.1 : 0.05;
 
-	cout << "Tution: " << tuition;
+	cout << commission;*/
+
+// Exercise 12: get two numbers, store the larger in a seperate variable, print the larger
+	cout << "Enter two values: ";
+
+	int num1;
+	int num2;
+	cin >> num1 >> num2;
+	
+	int bigNum = (num1 > num2) ? num1 : num2;
+	cout << "Big Num: " << bigNum;
 
 	return 0;
 }
