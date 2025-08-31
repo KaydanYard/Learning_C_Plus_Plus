@@ -33,41 +33,38 @@ int main() {
 // Exercise 13 create a basic calculator
 	int var1;
 	int var2;
-	int op3rator;
-	string output;
+	char op3rator;
+	int output;
 
 	cout << "Enter the first value: ";
 	cin >> var1;
 	
-	cout << "Pick one of the following" << endl
-		 << "1- Multiply" << endl
-		 << "2- Divide" << endl
-		 << "3- Add" << endl
-		 << "4- Subtract" << endl;
+	cout << "Enter an operator: ";
 	cin >> op3rator;
 	
 	cout << "Enter the second value: ";
 	cin >> var2;
 
 	switch (op3rator) {
-		case 1:
+		case '*':
 			output = var1 * var2;
+			cout << "Output: " << output;
 			break;
-		case 2:
+		case '/':
 			output = var1 / var2;
+			cout << "Output: " << output;
 			break;
-		case 3:
+		case '+':
 			output = var1 + var2;
+			cout << "Output: " << output;
 			break;
-		case 4:
+		case '-':
 			output = var1 - var2;
+			cout << "Output: " << output;
 			break;
 		default:
-			output = "NaN";
 			cout << "I don't understand" << endl;
 	}
-
-	cout << "Output: " << output;
 
 	return 0;
 }
