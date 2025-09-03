@@ -10,34 +10,20 @@
 using namespace std;
 
 int main() {
-// Range-based For loops
-	/*int numbers[] = {1, 2, 3, 4};
-	
-	// sizeof(numbers): 16
-	// sizeof(int): 4
+// While Loops
+	/*int i = 1;
+	while (i <= 5) {
+		cout << i << endl;
+		i++;
+	}*/
 
-	for (int i = 0; i < sizeof(numbers) / sizeof(int); i++)
-		cout << numbers[i] << endl;
-
-	for (int number: numbers)  // is the same as the loop above, just more concise.
-		cout << number << endl;
-	*/
-	
-	/*string name = "Kaydan Yardley";
-	for (char ch: name)
-		cout << ch << endl;*/
-
-// Exercise 15: Find the average temperature from a list of temperatures
-	int temperatures[] = {60, 80, 90};
-	double sum = 0;
-	int count = sizeof(temperatures) / sizeof(int);
-	
-	for (int temperature: temperatures) {
-		sum += temperature;
+	int number = 0;
+	while (number < 1 || number > 5) {
+		cout << "Number: ";
+		cin >> number;
+		if (number < 1 || number > 5) {
+			cout << "Invalid Number, enter a number from 1 to 5" << endl;
+		}
 	}
-
-	double average = sum / count;
-	cout << average << endl;
-
 	return 0;
 }
