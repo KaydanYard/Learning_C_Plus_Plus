@@ -10,21 +10,34 @@
 using namespace std;
 
 int main() {
-// Exercise 14: ask the user for a positive number and print the factorial of that number
-	int input;
-	long factorial = 1.0;
-
-	cout << "Enter a positive number to find it's factorial: ";
-	cin >> input;
+// Range-based For loops
+	/*int numbers[] = {1, 2, 3, 4};
 	
-	if (input < 0)
-		cout << "Error! Factorial of a Negative number does not exist";
-	else
-		for (int i = 1; i <= input; ++i) {
-			factorial *= i;
-		}
+	// sizeof(numbers): 16
+	// sizeof(int): 4
 
-	cout << factorial;
+	for (int i = 0; i < sizeof(numbers) / sizeof(int); i++)
+		cout << numbers[i] << endl;
+
+	for (int number: numbers)  // is the same as the loop above, just more concise.
+		cout << number << endl;
+	*/
+	
+	/*string name = "Kaydan Yardley";
+	for (char ch: name)
+		cout << ch << endl;*/
+
+// Exercise 15: Find the average temperature from a list of temperatures
+	int temperatures[] = {60, 80, 90};
+	double sum = 0;
+	int count = sizeof(temperatures) / sizeof(int);
+	
+	for (int temperature: temperatures) {
+		sum += temperature;
+	}
+
+	double average = sum / count;
+	cout << average << endl;
 
 	return 0;
 }
