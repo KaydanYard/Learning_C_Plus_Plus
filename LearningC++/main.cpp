@@ -8,21 +8,18 @@
 #include <string>
 
 using namespace std;
-// Local vs Global variables
+// Declaring Functions
 
-
-// Global variable (global scope)
-const double taxRate = 0.2;
-
-double calculateTax(int sales) {
-	return sales * taxRate;
-}
+	// Function declaration
+void greet(string name);
 
 int main() {
-	// Local variable (local scope)
-	int sales = 10'000;
-	double tax = calculateTax(sales);
-	cout << tax;
+	greet("Kaydan");
 
 	return 0;
+}
+
+	// Function definition
+void greet(string name) {
+	cout << "Hello " << name;
 }
