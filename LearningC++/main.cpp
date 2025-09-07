@@ -6,20 +6,14 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
+#include "../LearningC++/greet.h"
 
 using namespace std;
-// Declaring Functions
-
-	// Function declaration
-void greet(string name);
+// Organizing Functions in Files
 
 int main() {
-	greet("Kaydan");
+
+	greet("Kaydan Yardley");
 
 	return 0;
-}
-
-	// Function definition
-void greet(string name) {
-	cout << "Hello " << name;
 }
