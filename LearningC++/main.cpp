@@ -8,17 +8,21 @@
 #include <string>
 
 using namespace std;
-// Passing Arguments by Value or Reference
+// Local vs Global variables
 
-	// the '&' is what you pass in to reference a variable
-void increasePrice(double& price) {
-	price *= 1.2;
+
+// Global variable (global scope)
+const double taxRate = 0.2;
+
+double calculateTax(int sales) {
+	return sales * taxRate;
 }
 
 int main() {
-	double price = 100;
-	increasePrice(price);
-	cout << price;
+	// Local variable (local scope)
+	int sales = 10'000;
+	double tax = calculateTax(sales);
+	cout << tax;
 
 	return 0;
 }
