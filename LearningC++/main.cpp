@@ -8,19 +8,17 @@
 #include <string>
 
 using namespace std;
-// Overloading Functions
+// Passing Arguments by Value or Reference
 
-void greet(string name) {
-	cout << "Hello " << name;
-}
-
-// Signature = name + (number and type of parameters)
-void greet(string title, string name) {
-	cout << "Hello " << title << " " << name;
+	// the '&' is what you pass in to reference a variable
+void increasePrice(double& price) {
+	price *= 1.2;
 }
 
 int main() {
-	greet("Kaydan");
+	double price = 100;
+	increasePrice(price);
+	cout << price;
 
 	return 0;
 }
