@@ -8,15 +8,19 @@
 #include <string>
 
 using namespace std;
-// Parameters with a default value
+// Overloading Functions
 
-double calculateTax(double income, double taxRate = 0.2) {
-	return income * taxRate;
+void greet(string name) {
+	cout << "Hello " << name;
+}
+
+// Signature = name + (number and type of parameters)
+void greet(string title, string name) {
+	cout << "Hello " << title << " " << name;
 }
 
 int main() {
-	double tax = calculateTax(10'000);
-	cout << tax;
+	greet("Kaydan");
 
 	return 0;
 }
