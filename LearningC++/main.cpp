@@ -1,20 +1,19 @@
-#define _USE_MATH_DEFINES
-
-#include <cmath>
-#include <cstdlib>
-#include <ctime>
-#include <iomanip>
 #include <iostream>
 #include <string>
-#include "../LearningC++/greet.h"
 
 using namespace std;
-using messaging::greet;
-// Using Namespaces
+
+// Copying Arrays
 
 int main() {
+	int first[] = { 10, 20, 30 };
+	int second[size(first)];
+	
+	for (int i = 0; i < size(first); i++) 
+		second[i] = first[i];
 
-	greet("Kaydan Yardley");
+	for (int number: second) 
+		cout << number << endl;
 
 	return 0;
 }
