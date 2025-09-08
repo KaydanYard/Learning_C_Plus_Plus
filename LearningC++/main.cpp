@@ -9,7 +9,8 @@
 #include "../LearningC++/greet.h"
 
 using namespace std;
-// Organizing Functions in Files
+using messaging::greet;
+// Using Namespaces
 
 int main() {
 
