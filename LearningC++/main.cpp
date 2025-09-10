@@ -3,37 +3,31 @@
 
 using namespace std;
 
-// Exercise 20: Sort an array using the Bubble Sort Algorithm
+// Multi-dimensional Arrays
 
-void sort(int* array, int size) {
-	
-	cout << "Start: ";
-	for (int i = 0; i < size; i++) {
-		cout << array[i] << " ";
-	}
-	cout << endl;
+// a matrix is a 2 dimensional array
 
-	for (int pass = 0; pass < size; pass++) {
-		for (int i = 0; i < size - 1; i++) {
-			if (array[i] > array[i + 1]) {
-				int temp = array[i + 1];
-				array[i + 1] = array[i];
-				array[i] = temp;
-			}
+const int rows = 2;
+const int cols = 3;
+
+void printMatrix(int matrix[rows][cols]) {
+	for (int row = 0; row < rows; row++) {
+		for (int col = 0; col < cols; col++) {
+			cout << matrix[row][col] << " | ";
 		}
+		cout << endl;
 	}
 }
 
 int main() {
-	int values[] =  { 2, 8, 4, 1, 3 };
-	
-	sort(values, sizeof(values) / sizeof(int));
-	
-	cout << "Final: ";
-	for (int i = 0; i < (sizeof(values) / sizeof(int)); i++) {
-		cout << values[i] << " ";
-	}
-	cout << endl;
+
+	// 2x3
+	int matrix[rows][cols] = {
+		11, 12, 13,
+		21, 22, 23
+	};
+
+	printMatrix(matrix);
 
 	return 0;
 }
