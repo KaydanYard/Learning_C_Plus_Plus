@@ -3,29 +3,37 @@
 
 using namespace std;
 
-// Exercise 19: Create a Linear Search Algorithm (very basic shit)
+// Exercise 20: Sort an array using the Bubble Sort Algorithm
 
-					// size_t is better than int because it can hold more
-int findTargetValue(int* values, size_t size, int targetValue) {
+void sort(int* array, int size) {
+	
+	cout << "Start: ";
 	for (int i = 0; i < size; i++) {
-		if (targetValue == values[i]) {
-			cout << "Match found" << endl;
-			return values[i];
-		}
-		else {
-			cout << "Not a match" << endl;
+		cout << array[i] << " ";
+	}
+	cout << endl;
+
+	for (int pass = 0; pass < size; pass++) {
+		for (int i = 0; i < size - 1; i++) {
+			if (array[i] > array[i + 1]) {
+				int temp = array[i + 1];
+				array[i + 1] = array[i];
+				array[i] = temp;
+			}
 		}
 	}
-
-	cout << "Couldn't find a single match" << endl;
-	return -1;
 }
 
 int main() {
-	int values[] =  { 10, 20, 30 };
-	int targetValue = 30;
-
-	cout << findTargetValue(values, sizeof(values) / sizeof(int), targetValue);
+	int values[] =  { 2, 8, 4, 1, 3 };
 	
+	sort(values, sizeof(values) / sizeof(int));
+	
+	cout << "Final: ";
+	for (int i = 0; i < (sizeof(values) / sizeof(int)); i++) {
+		cout << values[i] << " ";
+	}
+	cout << endl;
+
 	return 0;
 }
