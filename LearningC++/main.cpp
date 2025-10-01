@@ -3,17 +3,21 @@
 
 using namespace std;
 
-// Passing Pointers to Functions
+// Exercise 21: Implement the swap function for swapping two variables using pointers
 
-void increasePrice(double& price) {
-		price *= 1.2;
-	}
+void swap(int* first, int* second) {
+	int holder = *first;
+	*first = *second;
+	*second = holder;
+}
 
 int main() {
-	double price = 100;
-	increasePrice(price);
-	cout << price;
-	
+	int x = 10;
+	int y = 20;
+	swap(&x, &y);
+
+	cout << "X: " << x << endl
+		 << "Y: " << y;
 
 	return 0;
 }
