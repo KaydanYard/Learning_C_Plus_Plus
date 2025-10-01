@@ -3,31 +3,16 @@
 
 using namespace std;
 
-// Multi-dimensional Arrays
-
-// a matrix is a 2 dimensional array
-
-const int rows = 2;
-const int cols = 3;
-
-void printMatrix(int matrix[rows][cols]) {
-	for (int row = 0; row < rows; row++) {
-		for (int col = 0; col < cols; col++) {
-			cout << matrix[row][col] << " | ";
-		}
-		cout << endl;
-	}
-}
+// Declaring and Using Pointers
 
 int main() {
+	int number = 10;
+	//  (Referencing)	(Addressing)		(De-Referencing)
+	// ...* = pointer, & = address of var, *... = access original's value
+	int* ptr = &number;
 
-	// 2x3
-	int matrix[rows][cols] = {
-		11, 12, 13,
-		21, 22, 23
-	};
-
-	printMatrix(matrix);
+	*ptr = 20;
+	cout << *ptr;
 
 	return 0;
 }
