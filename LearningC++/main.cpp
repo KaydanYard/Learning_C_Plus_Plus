@@ -3,12 +3,17 @@
 
 using namespace std;
 
-// Constant Pointers
+// Passing Pointers to Functions
+
+void increasePrice(double& price) {
+		price *= 1.2;
+	}
 
 int main() {
-	const int x = 10;
-	const int* const ptr = &x;
-
+	double price = 100;
+	increasePrice(price);
+	cout << price;
+	
 
 	return 0;
 }
