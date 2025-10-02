@@ -3,21 +3,16 @@
 
 using namespace std;
 
-// Exercise 21: Implement the swap function for swapping two variables using pointers
+// The Relationship between Arrays and Pointers
 
-void swap(int* first, int* second) {
-	int holder = *first;
-	*first = *second;
-	*second = holder;
+void printNumbers(int numbers[]) {
+	numbers[0] = 0;
 }
 
 int main() {
-	int x = 10;
-	int y = 20;
-	swap(&x, &y);
-
-	cout << "X: " << x << endl
-		 << "Y: " << y;
+	int numbers[] = {10, 20, 30};
+	printNumbers(numbers);
+	cout << numbers[0];
 
 	return 0;
 }
