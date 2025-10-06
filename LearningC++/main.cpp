@@ -3,16 +3,17 @@
 
 using namespace std;
 
-// Pointer Arithmetic
+// Comparing Pointers
 
 int main() {
-	int numbers[] = { 10, 20, 30};
-	int* ptr = numbers;
-	
-	// all of the following are the same+
-	cout << *(ptr + 1);
-	cout << ptr[1]; 
-	cout << numbers[1];
+	int x = 10;
+	int y = 20;
+
+	int* ptrX = &x;
+	int* ptrY = &x;
+
+	if (ptrX != nullptr)
+		cout << *ptrX;
 
 	return 0;
 }
