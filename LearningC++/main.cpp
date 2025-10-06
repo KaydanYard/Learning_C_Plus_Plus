@@ -3,17 +3,17 @@
 
 using namespace std;
 
-// Comparing Pointers
+// Exercise 22: Iterate over an array in reverse order using a pointer
 
 int main() {
-	int x = 10;
-	int y = 20;
+	int numbers[] = { 10, 20, 30 };
 
-	int* ptrX = &x;
-	int* ptrY = &x;
+	int* ptr = &numbers[size(numbers) - 1];
 
-	if (ptrX != nullptr)
-		cout << *ptrX;
+	while (ptr >= numbers) {
+		cout << *ptr << endl;
+		ptr--;
+	}
 
 	return 0;
 }
