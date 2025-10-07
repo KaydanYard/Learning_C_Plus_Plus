@@ -3,17 +3,14 @@
 
 using namespace std;
 
-// Exercise 22: Iterate over an array in reverse order using a pointer
+// Dynamic Memory Allocation
 
 int main() {
-	int numbers[] = { 10, 20, 30 };
 
-	int* ptr = &numbers[size(numbers) - 1];
-
-	while (ptr >= numbers) {
-		cout << *ptr << endl;
-		ptr--;
-	}
+	// Heap (Free Store)
+	int* numbers = new int[10];
+	delete[] numbers;
+	numbers = nullptr;
 
 	return 0;
 }
